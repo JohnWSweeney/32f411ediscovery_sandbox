@@ -1,0 +1,10 @@
+# gitignore
+
+# folders
+.metadata
+firmware/.settings
+firmware/Debug
+firmware/Release
+
+# files
+*.launch
