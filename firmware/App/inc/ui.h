@@ -1,5 +1,6 @@
-#ifndef INC_TIMING_H_
-#define INC_TIMING_H_
+
+#ifndef INC_UI_H_
+#define INC_UI_H_
 
 /*============================================ Includes ==========================================*/
 
@@ -7,7 +8,7 @@
 
 /*======================================= Public Functions =======================================*/
 
-void timing_sysTickISR(void);
-void timing_waitForSysTick(void);
+void set_heartbeat_blue(void);
+void ui_manage(void);
 
-#endif /* INC_TIMING_H_ */
+#endif /* INC_UI_H_ */

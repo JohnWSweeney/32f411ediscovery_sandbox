@@ -77,7 +77,7 @@ void mcuConfiguration(void)
 	  /* Initialize all configured peripherals */
 	  MX_GPIO_Init();
 	  /* USER CODE BEGIN 2 */
-
+	  LL_SYSTICK_EnableIT();
 	  /* USER CODE END 2 */
 }
 /* USER CODE END PFP */
@@ -142,15 +142,15 @@ static void MX_GPIO_Init(void)
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOD);
 
   /**/
-  LL_GPIO_ResetOutputPin(ledBlue_GPIO_Port, ledBlue_Pin);
+  LL_GPIO_ResetOutputPin(GPIOD, ledGreen_Pin|ledOrange_Pin|ledRed_Pin|ledBlue_Pin);
 
   /**/
-  GPIO_InitStruct.Pin = ledBlue_Pin;
+  GPIO_InitStruct.Pin = ledGreen_Pin|ledOrange_Pin|ledRed_Pin|ledBlue_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(ledBlue_GPIO_Port, &GPIO_InitStruct);
+  LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

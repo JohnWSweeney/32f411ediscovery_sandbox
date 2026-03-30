@@ -69,6 +69,12 @@ void mcuConfiguration(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ledGreen_Pin LL_GPIO_PIN_12
+#define ledGreen_GPIO_Port GPIOD
+#define ledOrange_Pin LL_GPIO_PIN_13
+#define ledOrange_GPIO_Port GPIOD
+#define ledRed_Pin LL_GPIO_PIN_14
+#define ledRed_GPIO_Port GPIOD
 #define ledBlue_Pin LL_GPIO_PIN_15
 #define ledBlue_GPIO_Port GPIOD
 #ifndef NVIC_PRIORITYGROUP_0
@@ -85,7 +91,14 @@ void mcuConfiguration(void);
 #endif
 
 /* USER CODE BEGIN Private defines */
-
+#define LED_BLUE_PORT				(ledBlue_GPIO_Port)
+#define LED_BLUE_PIN				(ledBlue_Pin)
+#define LED_RED_PORT				(ledRed_GPIO_Port)
+#define LED_RED_PIN					(ledRed_Pin)
+#define LED_ORANGE_PORT				(ledOrange_GPIO_Port)
+#define LED_ORANGE_PIN				(ledOrange_Pin)
+#define LED_GREEN_PORT				(ledGreen_GPIO_Port)
+#define LED_GREEN_PIN				(ledGreen_Pin)
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
